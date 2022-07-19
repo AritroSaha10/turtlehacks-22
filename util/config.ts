@@ -1,12 +1,12 @@
 const name = "TurtleHacks"
 const eventTimeShort = "October 14 - 16"
 const eventTime = "October 14 - 16, 2022"
-const description = "Turtle Hacks DEV description"
+const description = "Turtle Hacks is a hackathon happening from October 14 - 16, 2022 focused on the environment. Register today!"
 const image = {
-    src: "https://i.imgur.com/AdRiUtu.png",
+    src: "https://i.imgur.com/z0ajy2J.png",
     type: "image/png",
-    width: "2069",
-    height: "1330"
+    width: "500",
+    height: "500"
 }
 
 const twitterCreator = "@TurtleHacks"

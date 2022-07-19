@@ -2,6 +2,8 @@ import { MdDarkMode, MdEmail, MdLightMode } from 'react-icons/md'
 import { FaInstagram, FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa'
 import { IoMdDocument } from 'react-icons/io'
 
+import InstagramLogo from "../public/ig.png"
+
 import React, { useState, useEffect, FormEvent } from 'react'
 
 import Image from 'next/image'
@@ -132,7 +134,7 @@ export default function Footer() {
           rel="noreferrer"
           title="Instagram"
         >
-          <FaInstagram />
+          <Image src={InstagramLogo} width={30} height={30} alt="instagram" />
         </a>
       </div>
     </footer>

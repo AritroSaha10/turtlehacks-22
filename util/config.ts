@@ -1,4 +1,4 @@
-const name = "Turtle Hacks"
+const name = "TurtleHacks"
 const eventTimeShort = "October 14 - 16"
 const eventTime = "October 14 - 16, 2022"
 const description = "Turtle Hacks DEV description"

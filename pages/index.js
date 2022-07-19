@@ -26,7 +26,7 @@ const bottomLineVariants = {
   },
   animate: {
     transition: {
-      delayChildren: 0.5,
+      delayChildren: 0.8,
       staggerChildren: 0.2,
     }
   }
@@ -37,12 +37,12 @@ const characterVariants = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.3, ...transition }, }
 };
 
-const topLine = "Get ready for...".split(' ');
-const bottomLine = name.toUpperCase().split(' ');
+const topLine = "Prepare for...".split(' ');
+const bottomLine = "Turtle Hacks".toUpperCase().split(' ');
 
 export default function Home() {
   return (
-    <Layout name="Home" noAnim>
+    <Layout name="Home" noAnim home>
       <div className="flex flex-col h-screen w-full relative">
         {/* Background image using Next.js Image, taken from here: https://github.com/vercel/next.js/discussions/18357#discussioncomment-132523 */}
         <Image
@@ -62,8 +62,8 @@ export default function Home() {
                 {topLine.map(char => <motion.span className="inline-block relative" variants={characterVariants} key={char}>{char}</motion.span>)}
               </motion.div>
 
-              <motion.div variants={bottomLineVariants} initial="initial" animate="animate" className="font-bold flex flex-col flex-wrap gap-2 text-6xl sm:text-7xl lg:text-9xl">
-                {bottomLine.map(char => <motion.span className="inline-block relative bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-blue-600 pb-5" variants={characterVariants} key={char}>{char}</motion.span>)}
+              <motion.div variants={bottomLineVariants} initial="initial" animate="animate" className="font-extrabold flex flex-col flex-wrap gap-2 text-6xl sm:text-7xl lg:text-9xl">
+                {bottomLine.map(char => <motion.span className="inline-block relative bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-cyan-600 pb-5" variants={characterVariants} key={char}>{char}</motion.span>)}
               </motion.div>
             </div>
           </div>

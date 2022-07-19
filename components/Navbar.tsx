@@ -6,6 +6,12 @@ import Logo from "../public/logo-transparent.png";
 
 import { GoThreeBars } from "react-icons/go"
 
+import { name } from "../util/config";
+
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+
+const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
+
 const links = [
     {
         name: "Home",
@@ -19,6 +25,7 @@ const links = [
         id: "about",
         priority: false
     },
+    /*
     {
         name: "Agenda",
         link: "/agenda",
@@ -37,6 +44,7 @@ const links = [
         id: "prizes",
         priority: false
     },
+    */
     {
         name: "Sign Up",
         link: "/sign-up",
@@ -45,17 +53,49 @@ const links = [
     },
 ];
 
-export default function Header() {
+const bgSteps = [
+    "bg-emerald-1000/[0]",
+    "bg-emerald-1000/[0.05]",
+    "bg-emerald-1000/[0.1]",
+    "bg-emerald-1000/[0.15]",
+    "bg-emerald-1000/[0.2]",
+    "bg-emerald-1000/[0.25]",
+    "bg-emerald-1000/[0.3]",
+    "bg-emerald-1000/[0.35]",
+    "bg-emerald-1000/[0.4]",
+    "bg-emerald-1000/[0.45]",
+    "bg-emerald-1000/[0.5]",
+    "bg-emerald-1000/[0.55]",
+    "bg-emerald-1000/[0.6]",
+    "bg-emerald-1000/[0.65]",
+    "bg-emerald-1000/[0.7]",
+    "bg-emerald-1000/[0.75]",
+    "bg-emerald-1000/[0.8]",
+    "bg-emerald-1000/[0.85]",
+    "bg-emerald-1000/[0.90]",
+    "bg-emerald-1000/[0.95]",
+    "bg-emerald-1000/[1.00]",
+]
+
+export default function Header({ home }) {
     const [showDropdown, setShowDropdown] = useState(false);
+    const [opacity, setOpacity] = useState(bgSteps[0]);
+
+    useScrollPosition(({ prevPos, currPos }) => {
+        console.log(currPos.y)
+        const currScroll = clamp(Math.abs(currPos.y), 0, 100);
+        const scrollFactor = Math.floor(currScroll / 5);
+        setOpacity(bgSteps[scrollFactor])
+    })
 
     return (
-        <header className="bg-emerald-1000 py-2 lg:py-4 sticky z-[99999999]">
-            <div className="container px-4 mx-auto lg:flex lg:items-center">
-                <div className="flex justify-between items-center">
+        <header className={`flex flex-col items-center ${home ? opacity : "bg-emerald-1000"} py-2 lg:py-4 fixed w-full z-[99999999]`}>
+            <div className="container px-4 lg:flex lg:items-center lg:justify-around w-full">
+                <div className="flex justify-around items-center">
                     <Link href="/">
                         <a className="flex flex-row items-center gap-4 font-bold text-xl text-teal">
                             <Image src={Logo} alt="logo" width={64} height={64} />
-                            <h2 className="text-2xl text-white">Turtle Hacks</h2>
+                            <h2 className="text-2xl text-white">{name}</h2>
                         </a>
                     </Link>
 
@@ -67,12 +107,12 @@ export default function Header() {
                             () => {
                                 setShowDropdown(!showDropdown);
                             }}
-                        >
+                    >
                         <GoThreeBars />
                     </button>
                 </div>
 
-                <div className={`${showDropdown ? "flex" : "hidden"} lg:flex flex-col lg:flex-row lg:ml-auto mt-3 lg:mt-0`} data-test-id="navbar">
+                <div className={`${showDropdown ? "flex" : "hidden"} lg:flex flex-col lg:flex-row mt-3 lg:mt-0`} data-test-id="navbar">
                     {
                         links.map(({ name, link, priority, id }) =>
                             <Link key={name} href={link}>

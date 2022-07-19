@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@n8tb1t/use-scroll-position": "^2.0.3",
     "daisyui": "^2.19.0",
     "framer-motion": "^6.5.1",
     "next": "12.2.2",

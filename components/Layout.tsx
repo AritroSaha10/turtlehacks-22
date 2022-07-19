@@ -5,7 +5,7 @@ import Footer from "./Footer"
 
 import { motion } from "framer-motion"
 
-import { name, description, image, twitterCreator } from "../util/config"
+import { name as siteName, description, image, twitterCreator } from "../util/config"
 
 const transition = { ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -16,13 +16,14 @@ const contentVariants = {
     transition: { duration: 0.4, ...transition }
 }
 
-export default function Layout({ name, children, noAnim }) {
-    const title = `${name} | ${name}`;
+export default function Layout({ name, children, noAnim, home }) {
+    const title = `${name} | ${siteName}`;
 
     return (
         <div className="flex flex-col min-h-screen bg-indigo-200 overflow-hidden" key={name}>
             <Head>
                 <title>{title}</title>
+                
                 <meta name="description" content={description} />
 
                 <meta property="og:title" content={title} />
@@ -40,7 +41,7 @@ export default function Layout({ name, children, noAnim }) {
                 <meta property="twitter:image:src" content={image.src} />
             </Head>
 
-            <Navbar />
+            <Navbar home={home} />
             
             <motion.div
                 initial={noAnim ? null : contentVariants.initial}

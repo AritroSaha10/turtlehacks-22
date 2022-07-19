@@ -49,7 +49,7 @@ export default function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
 
     return (
-        <header className="bg-purple-1000 py-2 lg:py-4 sticky z-[99999999]">
+        <header className="bg-emerald-1000 py-2 lg:py-4 sticky z-[99999999]">
             <div className="container px-4 mx-auto lg:flex lg:items-center">
                 <div className="flex justify-between items-center">
                     <Link href="/">
@@ -76,7 +76,7 @@ export default function Header() {
                     {
                         links.map(({ name, link, priority, id }) =>
                             <Link key={name} href={link}>
-                                <a className={`${priority ? "text-purple-300 hover:bg-purple-900 hover:text-white text-center border border-solid border-purple-900 mt-1 lg:mt-0 lg:ml-1" : "text-gray-300 hover:bg-gray-200/25 hover:text-white"} p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors`}>
+                                <a className={`${priority ? "text-emerald-300 hover:bg-emerald-900 hover:text-white text-center border border-solid border-emerald-900 mt-1 lg:mt-0 lg:ml-1" : "text-gray-300 hover:bg-gray-200/25 hover:text-white"} p-2 lg:px-4 lg:mx-2 rounded duration-300 transition-colors`}>
                                     {name}
                                 </a>
                             </Link>

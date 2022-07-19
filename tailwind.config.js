@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        purple: {
-          1000: "#1B0245"
+        emerald: {
+          1000: "#213b22"
         }
       },
       fontSize: {

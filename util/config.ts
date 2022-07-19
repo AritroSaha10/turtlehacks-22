@@ -1,5 +1,6 @@
-const name = "Turtle Hacks DEV"
-const eventTime = "August 26 - 28, 2022"
+const name = "Turtle Hacks"
+const eventTimeShort = "October 14 - 16"
+const eventTime = "October 14 - 16, 2022"
 const description = "Turtle Hacks DEV description"
 const image = {
     src: "https://i.imgur.com/AdRiUtu.png",
@@ -13,4 +14,4 @@ const discordLink = "#"
 const linkedinLink = "#"
 const instagramLink = "#"
 
-export { name, description, image, eventTime, twitterCreator, discordLink, linkedinLink, instagramLink }
+export { name, description, image, eventTime, eventTimeShort, twitterCreator, discordLink, linkedinLink, instagramLink }

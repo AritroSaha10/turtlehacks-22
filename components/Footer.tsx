@@ -12,7 +12,7 @@ import Link from 'next/link'
 import { discordLink, eventTime, instagramLink, linkedinLink, name } from '../util/config'
 
 const buttonColoring =
-  'bg-violet-700 text-white hover:bg-white hover:text-violet-700 active:bg-violet-500 active:text-white transition-all duration-300'
+  'bg-emerald-700 text-white hover:bg-white hover:text-emerald-700 active:bg-emerald-500 active:text-white transition-all duration-300'
 
 enum EmailState {
   Neutral,
@@ -43,11 +43,11 @@ export default function Footer() {
   }
 
   return (
-    <footer className="flex flex-col justify-between gap-4 px-12 lg:px-20 py-8 bg-purple-1000 items-center z-[99999999]">
+    <footer className="flex flex-col justify-between gap-4 px-12 lg:px-20 py-8 bg-emerald-1000 items-center z-[99999999]">
       <div className="flex justify-between items-center gap-6 lg:w-1/3 mb-4">
         <div>
           <h2 className="text-4xl text-white">{name}</h2>
-          <p className="text-lg text-violet-500">
+          <p className="text-lg text-emerald-500">
             {eventTime}
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function Footer() {
 
       <div className="lg:w-1/3">
         <h2 className="text-2xl text-white">Contact Us</h2>
-        <p className="text-md text-violet-500">
+        <p className="text-md text-emerald-500">
           Learn more - don&apos;t hesitate to get in touch!
         </p>
 
@@ -98,7 +98,7 @@ export default function Footer() {
         )}
 
         {emailState == EmailState.Success && (
-          <p className="text-sm text-violet-400">Thanks for submitting!</p>
+          <p className="text-sm text-emerald-400">Thanks for submitting!</p>
         )}
       </div>
 

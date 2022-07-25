@@ -10,9 +10,9 @@ export default function WaveEffect() {
     useScrollPosition(({ currPos }) => {
         const currScroll = clamp(Math.abs(currPos.y), 0, 925);
         let curveVal = currScroll / 925 * Math.PI;
-        
-        const topHeight = Math.abs(Math.sin(curveVal) * 300);
-        const bottomHeight = Math.abs(Math.sin(curveVal) * 400);
+
+        const topHeight = Math.abs(Math.sin(curveVal) * 200);
+        const bottomHeight = Math.abs(Math.sin(curveVal) * 300);
 
         setWaveHeight(`${topHeight}px`);
         setBottomWaveHeight(`${bottomHeight}px`);

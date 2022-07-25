@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { eventTimeShort } from '../../util/config'
 import transition from "../../util/anim/transition";
 
-import Banner from "../../public/banner.svg"
+import Banner from "../../public/banner.png"
 
 const topLineVariants = {
   initial: {},
@@ -46,6 +46,8 @@ const Home: FC = () => (
           layout="fill"
           quality={100}
           priority={true}
+          placeholder="blur"
+          className="duration-300 transition-all"
         />
 
         <div className="absolute p-4 xs:p-8 sm:p-16 z-1 flex flex-col justify-center items-center h-screen bg-black/60 w-full">

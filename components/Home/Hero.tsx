@@ -1,19 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-
+import React, { FC } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion"
 
-import Layout from "../components/Layout"
+import { eventTimeShort } from '../../util/config'
+import transition from "../../util/anim/transition";
 
-import Banner from "../public/banner.svg"
-import { name, eventTimeShort } from '../util/config'
-
-const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+import Banner from "../../public/banner.svg"
 
 const topLineVariants = {
-  initial: {
-  },
+  initial: {},
   animate: {
     transition: {
       staggerChildren: 0.1,
@@ -22,8 +18,7 @@ const topLineVariants = {
 };
 
 const bottomLineVariants = {
-  initial: {
-  },
+  initial: {},
   animate: {
     transition: {
       delayChildren: 0.8,
@@ -40,10 +35,8 @@ const characterVariants = {
 const topLine = "Prepare for...".split(' ');
 const bottomLine = "Turtle Hacks".toUpperCase().split(' ');
 
-export default function Home() {
-  return (
-    <Layout name="Home" noAnim home>
-      <div className="flex flex-col h-screen w-full relative">
+const Home: FC = () => (
+    <div className="flex flex-col h-screen w-full relative">
         {/* Background image using Next.js Image, taken from here: https://github.com/vercel/next.js/discussions/18357#discussioncomment-132523 */}
         <Image
           src={Banner}
@@ -83,6 +76,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </Layout>
-  )
-}
+)
+
+export default Home;

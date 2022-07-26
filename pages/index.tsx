@@ -7,6 +7,7 @@ import FAQ from "../components/Home/FAQ"
 export default function Home() {
   return (
     <Layout name="Home" noAnim home>
+      <div id="home" /> {/* For scrolling to the top */}
       <Hero />
       <WaveEffect />
       <About />

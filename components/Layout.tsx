@@ -43,7 +43,7 @@ export default function Layout({ name, children, noAnim, home }) {
 
             <Navbar home={home} />
             
-            <motion.div
+            <motion.main
                 initial={noAnim ? null : contentVariants.initial}
                 animate={noAnim ? null : contentVariants.animate}
                 exit={noAnim ? null : contentVariants.exit}
@@ -51,7 +51,7 @@ export default function Layout({ name, children, noAnim, home }) {
                 className="flex-grow flex flex-col"
             >
                 {children}
-            </motion.div>
+            </motion.main>
 
             <Footer />
         </div>

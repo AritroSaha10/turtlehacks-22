@@ -15,36 +15,22 @@ const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, 
 const links = [
     {
         name: "Home",
-        link: "/",
+        link: "/#home",
         id: "home",
         priority: false
     },
     {
         name: "About",
-        link: "/about",
+        link: "/#about",
         id: "about",
         priority: false
     },
-    /*
     {
-        name: "Agenda",
-        link: "/agenda",
-        id: "agenda",
+        name: "FAQ",
+        link: "/#FAQ",
+        id: "faq",
         priority: false
     },
-    {
-        name: "Speakers",
-        link: "/speakers",
-        id: "speakers",
-        priority: false
-    },
-    {
-        name: "Prizes",
-        link: "/prizes",
-        id: "prizes",
-        priority: false
-    },
-    */
     {
         name: "Sign Up",
         link: "/sign-up",
@@ -96,10 +82,10 @@ export default function Header({ home }) {
     })
 
     return (
-        <header className={`flex flex-col items-center ${home ? opacity : "bg-emerald-1000"} py-2 lg:py-4 fixed w-full z-[99999999]`}>
+        <nav className={`flex flex-col items-center ${home ? opacity : "bg-emerald-1000"} py-2 lg:py-4 fixed w-full z-[99999999]`}>
             <div className="container px-4 lg:flex lg:items-center lg:justify-around w-full">
                 <div className="flex justify-around items-center">
-                    <Link href="/">
+                    <Link href="/#home">
                         <a className="flex flex-row items-center gap-4 font-bold text-xl text-teal">
                             <Image src={Logo} alt="logo" width={64} height={64} />
                             <h2 className="text-2xl text-white">{name}</h2>
@@ -131,6 +117,6 @@ export default function Header({ home }) {
                     }
                 </div>
             </div>
-        </header>
+        </nav>
     )
 }

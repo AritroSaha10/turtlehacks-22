@@ -38,7 +38,7 @@ const subtitle = "A subtitle".split(' ');
 
 const Home: FC = () => (
   <>
-    <div className="flex flex-col h-screen w-full fixed">
+    <section className="flex flex-col h-screen w-full fixed" id="home">
       {/* Background image using Next.js Image, taken from here: https://github.com/vercel/next.js/discussions/18357#discussioncomment-132523 */}
       <Image
         src={Banner}
@@ -146,7 +146,7 @@ const Home: FC = () => (
           </Link>
         </div>
       </div>
-    </div>
+    </section>
 
     <div className="h-screen z-[-10]" />
   </>

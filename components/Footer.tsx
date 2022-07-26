@@ -1,15 +1,14 @@
-import { MdDarkMode, MdEmail, MdLightMode } from 'react-icons/md'
-import { FaInstagram, FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa'
-import { IoMdDocument } from 'react-icons/io'
-
-import InstagramLogo from "../public/ig.png"
-
-import React, { useState, useEffect, FormEvent } from 'react'
-
+import React, { useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
+
+import axios from 'axios'
+
 import logo from '../public/logo.png'
 import EmailRegex from '../util/EmailRegex'
-import Link from 'next/link'
+
+import { FaLinkedin, FaDiscord } from 'react-icons/fa'
+import InstagramLogo from "../public/ig.png"
 
 import { discordLink, eventTime, instagramLink, linkedinLink, name } from '../util/config'
 
@@ -20,12 +19,13 @@ enum EmailState {
   Neutral,
   Invalid,
   Success,
+  Sending
 }
 
 export default function Footer() {
   const [emailState, setEmailState] = useState(EmailState.Neutral)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     // Extract email from form data
@@ -39,6 +39,23 @@ export default function Footer() {
     }
 
     // Submit to Airtable
+    setEmailState(EmailState.Sending);
+
+    try {
+      const startingTime = Date.now();
+
+      await axios.post("/api/addToNewsletter", {
+        email: email
+      });
+
+      // Slow down animation to take at least 300ms on user end so it's smoother
+      await new Promise(resolve => {
+        setTimeout(resolve.bind(null, null), 300 - (Date.now() - startingTime));
+      });
+    } catch (e) {
+      // We don't need the user to know of the error, but log it for later uses
+      console.error("Error when sending email", e);
+    }
 
     // Let user know it was sent successfully
     setEmailState(EmailState.Success);
@@ -63,7 +80,7 @@ export default function Footer() {
           alt="Logo"
         />
       </div>
-
+      
       <Link href="/sign-up">
         <a className={`px-9 py-3 rounded-xl text-lg ${buttonColoring}`}>
           Register Today!
@@ -73,14 +90,14 @@ export default function Footer() {
       <hr className="h-px bg-white w-full lg:w-[40%] my-6" />
 
       <div className="lg:w-1/3">
-        <h2 className="text-2xl text-white">Contact Us</h2>
+        <h2 className="text-2xl text-white">Newsletter</h2>
         <p className="text-md text-emerald-500">
-          Learn more - don&apos;t hesitate to get in touch!
+          Sign up to our newsletter to stay connected!
         </p>
 
         <form className="flex flex-col sm:flex-row items-center gap-2 mt-4" onSubmit={handleSubmit} noValidate>
           <input
-            className={`rounded-lg py-2 px-3 w-60 sm:w-72 align-middle text-white outline-none focus:ring-2 focus:ring-purple-700 duration-200 bg-white/20 shadow-lg focus:shadow-none ${emailState == EmailState.Invalid && "ring-1 ring-red-600"}`}
+            className={`rounded-lg py-2 px-3 w-60 sm:w-72 align-middle text-white outline-none focus:ring-2 focus:ring-emerald-700 duration-200 bg-white/20 shadow-lg focus:shadow-none ${emailState == EmailState.Invalid && "ring-1 ring-red-600"}`}
             placeholder="Your email address"
             name="email"
             type="email"

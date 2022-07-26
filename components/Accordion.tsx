@@ -7,10 +7,11 @@ import {
 
 interface Props {
     title: string,
-    content: string
+    content: string,
+    keepSeparator?: boolean
 };
 
-const Accordion: FC<Props>= ({ title, content }) => {
+const Accordion: FC<Props>= ({ title, content, keepSeparator }) => {
     const [open, setOpen] = useState(false);
 
     const handleToggle = () => {
@@ -18,9 +19,9 @@ const Accordion: FC<Props>= ({ title, content }) => {
     };
 
     return (
-        <MaterialAccordion open={open} onClick={handleToggle}>
-            <AccordionHeader className="text-white">{title}</AccordionHeader>
-            <AccordionBody className="text-2xl text-white">{content}</AccordionBody>
+        <MaterialAccordion open={open} onClick={handleToggle} className="border-2 border-white/50 px-4 relative mt-[-2px]">
+            <AccordionHeader className="text-white text-left">{title}</AccordionHeader>
+            <AccordionBody className="text-white mt-[-20px]">{content}</AccordionBody>
         </MaterialAccordion>
     );
 }

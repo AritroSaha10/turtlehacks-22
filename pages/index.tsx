@@ -2,6 +2,7 @@ import Layout from "../components/Layout"
 import Hero from "../components/Home/Hero"
 import About from "../components/Home/About"
 import WaveEffect from "../components/Home/WaveEffect"
+import FAQ from "../components/Home/FAQ"
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <WaveEffect />
       <About />
+      <FAQ />
     </Layout>
   )
 }

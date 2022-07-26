@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Logo from "../public/logo-transparent.png";
 
@@ -77,15 +77,22 @@ const bgSteps = [
     "bg-emerald-1000/[1.00]",
 ]
 
+const scrollPosToStep = (scrollPos: number) => {
+    const currScroll = clamp(Math.abs(scrollPos), 0, 100);
+    const scrollFactor = Math.floor(currScroll / 5);
+    return bgSteps[scrollFactor]
+}
+
 export default function Header({ home }) {
     const [showDropdown, setShowDropdown] = useState(false);
     const [opacity, setOpacity] = useState(bgSteps[0]);
 
-    useScrollPosition(({ prevPos, currPos }) => {
-        console.log(currPos.y)
-        const currScroll = clamp(Math.abs(currPos.y), 0, 100);
-        const scrollFactor = Math.floor(currScroll / 5);
-        setOpacity(bgSteps[scrollFactor])
+    useEffect(() => {
+        setOpacity(scrollPosToStep(window !== undefined ? window.scrollY : 0));
+    }, []);
+
+    useScrollPosition(({ currPos }) => {
+        setOpacity(scrollPosToStep(currPos.y));
     })
 
     return (

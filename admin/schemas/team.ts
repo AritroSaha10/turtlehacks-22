@@ -10,17 +10,24 @@ export default {
       name: "order",
       title: "Order",
       type: "number",
-      hidden: true
+      hidden: true,
     },
     {
       name: 'position',
       title: 'Position',
       type: 'string',
+      validation: (Rule: any) => Rule.required()
     },
     {
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: (Rule: any) => Rule.required()
+    },
+    {
+      name: 'website',
+      title: 'Website',
+      type: 'url',
     },
     {
       name: 'slug',
@@ -30,6 +37,7 @@ export default {
         source: 'name',
         maxLength: 96,
       },
+      validation: (Rule: any) => Rule.required()
     },
     {
       name: 'image',
@@ -38,6 +46,7 @@ export default {
       options: {
         hotspot: true,
       },
+      validation: (Rule: any) => Rule.required()
     },
   ],
   preview: {

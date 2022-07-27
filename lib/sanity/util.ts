@@ -1,4 +1,4 @@
-import client, { getClient, usePreviewSubscription } from "../../lib/sanity";
+import client, { getClient, usePreviewSubscription } from "@lib/sanity";
 import { groq } from "next-sanity";
 
 interface getAllSlugsReturn {

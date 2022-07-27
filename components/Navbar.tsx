@@ -2,13 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import Logo from "../public/logo-transparent.png";
-
-import { GoThreeBars } from "react-icons/go"
-
-import { name } from "../util/config";
-
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+
+import { name } from "@util/config";
+
+import Logo from "@media/logo-transparent.png";
+import { GoThreeBars } from "react-icons/go"
 
 const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
 

@@ -4,13 +4,12 @@ import Image from 'next/image'
 
 import axios from 'axios'
 
-import logo from '../public/logo.png'
-import EmailRegex from '../util/EmailRegex'
+import EmailRegex from '@util/EmailRegex'
+import { discordLink, eventTime, instagramLink, linkedinLink, name } from '@util/config'
 
+import logo from '@media/logo.png'
+import InstagramLogo from "@media/ig.png"
 import { FaLinkedin, FaDiscord } from 'react-icons/fa'
-import InstagramLogo from "../public/ig.png"
-
-import { discordLink, eventTime, instagramLink, linkedinLink, name } from '../util/config'
 
 const buttonColoring =
   'bg-emerald-700 text-white hover:bg-white hover:text-emerald-700 active:bg-emerald-500 active:text-white transition-all duration-300'

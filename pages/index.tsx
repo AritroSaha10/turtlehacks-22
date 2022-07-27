@@ -1,12 +1,12 @@
-import Layout from "../components/Layout"
+import Layout from "@components/Layout"
 
-import Hero from "../components/Home/Hero"
-import About from "../components/Home/About"
-import WaveEffect from "../components/Home/WaveEffect"
-import FAQ, { FrequentlyAskedQuestion } from "../components/Home/FAQ"
-import Team, { TeamMemberData } from "../components/Home/Team"
+import Hero from "@components/Home/Hero"
+import About from "@components/Home/About"
+import WaveEffect from "@components/Home/WaveEffect"
+import FAQ, { FrequentlyAskedQuestion } from "@components/Home/FAQ"
+import Team, { TeamMemberData } from "@components/Home/Team"
 
-import { getAllDocuments } from "../lib/sanity/util"
+import { getAllDocuments } from "@lib/sanity/util"
 
 interface HomeProps {
   faq: FrequentlyAskedQuestion[],

@@ -6,7 +6,7 @@ import Footer from "./Footer"
 
 import { motion } from "framer-motion"
 
-import { name as siteName, description, image, twitterCreator } from "../util/config"
+import { name as siteName, description, image, twitterCreator } from "@util/config"
 
 const transition = { ease: [0.6, 0.01, -0.05, 0.9] };
 

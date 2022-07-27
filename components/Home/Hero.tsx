@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion"
 
-import { eventTimeShort } from '../../util/config'
-import transition from "../../util/anim/transition";
+import { eventTimeShort } from '@util/config'
+import transition from "@util/anim/transition";
 
-import Banner from "../../public/banner.png"
-import classArrayToString from "../../util/styles/classNames";
+import Banner from "@media/banner.png"
+import classArrayToString from "@util/styles/classNames";
 
 const topLineVariants = {
   initial: {},

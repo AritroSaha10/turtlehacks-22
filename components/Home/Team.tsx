@@ -1,7 +1,7 @@
 import React from "react"
 import Image from 'next/image'
 
-import client from "../../lib/sanity";
+import client from "@lib/sanity";
 import { useNextSanityImage } from "next-sanity-image";
 import { SanityReference } from "@sanity/image-url/lib/types/types";
 

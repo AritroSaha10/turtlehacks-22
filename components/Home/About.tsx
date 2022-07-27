@@ -1,9 +1,9 @@
 import React from "react"
 import Image from 'next/image'
 
-import { eventTimeShort } from '../../util/config'
+import { eventTimeShort } from '@util/config'
 
-import Logo from "../../public/logo.png"
+import Logo from "@media/logo.png"
 
 export default function About() {
     return (

@@ -124,7 +124,7 @@ const Home: FC = () => (
           ])}
         >
           <p className="text-2xl text-center font-light">
-            Join us virtually from {eventTimeShort}!
+            Happening during {eventTimeShort}!
           </p>
         </div>
 

@@ -47,7 +47,6 @@ const Home: FC = () => (
         alt="Banner"
         layout="fill"
         quality={100}
-        priority={true}
         placeholder="blur"
         className="duration-300 transition-all"
       />

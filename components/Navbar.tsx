@@ -86,7 +86,7 @@ export default function Header({ home }) {
                 <div className="flex justify-around items-center">
                     <Link href="/#home">
                         <a className="flex flex-row items-center gap-4 font-bold text-xl text-teal">
-                            <Image src={Logo} alt="logo" width={64} height={64} quality={100} />
+                            <Image src={Logo} alt="logo" width={64} height={64} quality={100} placeholder="blur" />
                             <h2 className="text-2xl text-white">{name}</h2>
                         </a>
                     </Link>

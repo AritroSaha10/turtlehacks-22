@@ -11,7 +11,7 @@ interface Props {
     keepSeparator?: boolean
 };
 
-const Accordion: FC<Props>= ({ title, content, keepSeparator }) => {
+const Accordion: FC<Props> = ({ title, content, keepSeparator }) => {
     const [open, setOpen] = useState(false);
 
     const handleToggle = () => {

@@ -1,3 +1,4 @@
+import { ReactNode } from "react"
 import Head from "next/head"
 
 import Navbar from "./Navbar"
@@ -16,7 +17,14 @@ const contentVariants = {
     transition: { duration: 0.4, ...transition }
 }
 
-export default function Layout({ name, children, noAnim, home }) {
+interface Props {
+    name: string,
+    children?: ReactNode,
+    noAnim?: boolean,
+    home?: boolean
+};
+
+export default function Layout({ name, children, noAnim, home }: Props) {
     const title = `${name} | ${siteName}`;
 
     return (

@@ -1,10 +1,11 @@
 import { ReactNode } from "react"
 import Head from "next/head"
-
-import Navbar from "./Navbar"
-import Footer from "./Footer"
+import dynamic from "next/dynamic"
 
 import { m } from "framer-motion"
+
+import Navbar from "@components/Navbar"
+const Footer = dynamic(() => import("@components/Footer"), { suspense: true })
 
 import { name as siteName, description, image, twitterCreator } from "@util/config"
 

@@ -11,7 +11,7 @@ import { TeamMemberData } from "@components/Home/Team"
 
 import { getAllDocuments } from "@lib/sanity/util"
 
-const Hero = dynamic(() => import("@components/Home/Hero"), { suspense: true })
+import Hero from "@components/Home/Hero"
 const About = dynamic(() => import("@components/Home/About"), { suspense: true })
 const WaveEffect = dynamic(() => import("@components/Home/WaveEffect"), { suspense: true })
 const FAQ = dynamic(() => import("@components/Home/FAQ"), { suspense: true })

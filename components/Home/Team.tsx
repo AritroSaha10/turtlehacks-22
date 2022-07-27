@@ -63,7 +63,7 @@ export default function Team({ team }: { team: TeamMemberData[] }) {
     return (
         <section className="flex p-10 flex-col items-center lg:p-20 xl:px-40 bg-cyan-800 z-[30]">
             <div className="flex flex-col text-center mb-8">
-                <h3 className="text-lg text-emerald-200 font-semibold">The people behind it all</h3>
+                <span className="text-lg text-emerald-200 font-semibold">The people behind it all</span>
                 <h1 className="text-4xl text-white font-bold">Team</h1>
             </div>
 

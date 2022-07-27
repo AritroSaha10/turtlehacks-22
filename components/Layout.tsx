@@ -4,7 +4,7 @@ import Head from "next/head"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 
 import { name as siteName, description, image, twitterCreator } from "@util/config"
 
@@ -51,7 +51,7 @@ export default function Layout({ name, children, noAnim, home }: Props) {
 
             <Navbar home={home} />
             
-            <motion.main
+            <m.main
                 initial={noAnim ? null : contentVariants.initial}
                 animate={noAnim ? null : contentVariants.animate}
                 exit={noAnim ? null : contentVariants.exit}
@@ -59,7 +59,7 @@ export default function Layout({ name, children, noAnim, home }: Props) {
                 className="flex-grow flex flex-col"
             >
                 {children}
-            </motion.main>
+            </m.main>
 
             <Footer />
         </div>

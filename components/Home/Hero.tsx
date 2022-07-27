@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 
 import { eventTimeShort } from '@util/config'
 import transition from "@util/anim/transition";
@@ -65,7 +65,7 @@ const Home: FC = () => (
       >
         <div className="text-center">
           <div className="mb-4">
-            <motion.div
+            <m.div
               variants={topLineVariants}
               initial="initial"
               animate="animate"
@@ -77,7 +77,7 @@ const Home: FC = () => (
               ])}
             >
               {title.map(char =>
-                <motion.span
+                <m.span
                   className={classArrayToString([
                     "inline-block relative",
                     "pb-5",
@@ -89,11 +89,11 @@ const Home: FC = () => (
                   key={char}
                 >
                   {char}
-                </motion.span>
+                </m.span>
               )}
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               variants={bottomLineVariants}
               initial="initial"
               animate="animate"
@@ -106,11 +106,11 @@ const Home: FC = () => (
               ])}
             >
               {subtitle.map(char =>
-                <motion.span className="inline-block relative" variants={characterVariants} key={char}>
+                <m.span className="inline-block relative" variants={characterVariants} key={char}>
                   {char}
-                </motion.span>
+                </m.span>
               )}
-            </motion.div>
+            </m.div>
           </div>
         </div>
 

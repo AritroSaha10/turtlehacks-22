@@ -27,6 +27,7 @@ const TeamMember = ({ position, name, image, website }: TeamMemberData) => {
                         {...imageProps}
                         height={200}
                         width={200}
+                        quality={100}
                         objectFit="cover"
                         objectPosition="center"
                         alt="Photo"

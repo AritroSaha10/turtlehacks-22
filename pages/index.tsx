@@ -17,7 +17,6 @@ const WaveEffect = dynamic(() => import("@components/Home/WaveEffect"), { suspen
 const FAQ = dynamic(() => import("@components/Home/FAQ"), { suspense: true })
 const Team = dynamic(() => import("@components/Home/Team"), { suspense: true })
 
-
 interface HomeProps {
   faq: FrequentlyAskedQuestion[],
   team: TeamMemberData[]

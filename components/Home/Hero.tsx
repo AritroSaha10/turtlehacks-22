@@ -69,9 +69,9 @@ const Home: FC = () => (
               "Network at",
               "Compete at",
               "Win prizes at",
-            ]}/>
+            ]} />
 
-            
+
 
             {/*
             <m.div
@@ -132,7 +132,7 @@ const Home: FC = () => (
         <div
           className={classArrayToString([
             "md:w-3/4 lg:w-1/2",
-            "mb-12",
+            "mb-6",
             "flex flex-col",
             "gap-2",
             "text-white"
@@ -143,7 +143,23 @@ const Home: FC = () => (
           </p>
         </div>
 
-        <div>
+        <div className="flex flex-wrap gap-4">
+          <Link href="/#newsletter">
+            <a
+              className={classArrayToString([
+                "py-4 px-6",
+                "mt-4",
+                "bg-emerald-600 hover:bg-emerald-700",
+                "rounded-lg",
+                "text-lg lg:text-2xl",
+                "text-white font-semibold",
+                "duration-150"
+              ])}
+            >
+              Join our Newsletter
+            </a>
+          </Link>
+
           <Link href="/sign-up">
             <a
               className={classArrayToString([
@@ -156,7 +172,7 @@ const Home: FC = () => (
                 "duration-150"
               ])}
             >
-              Sponsor Us Today! →
+              Sponsor Us
             </a>
           </Link>
         </div>

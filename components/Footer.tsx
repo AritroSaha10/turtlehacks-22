@@ -88,7 +88,7 @@ export default function Footer() {
 
       <hr className="h-px bg-white w-full lg:w-[40%] my-6" />
 
-      <div className="lg:w-1/3">
+      <div className="lg:w-1/3" id="newsletter">
         <h2 className="text-2xl text-white">Newsletter</h2>
         <p className="text-md text-emerald-500">
           Sign up to our newsletter to stay connected!

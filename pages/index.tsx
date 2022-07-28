@@ -24,7 +24,8 @@ interface HomeProps {
 
 export async function getStaticProps({ preview = false }) {
   const faq = await getAllDocuments("faq", true, preview) as FrequentlyAskedQuestion[];
-  const team = await getAllDocuments("team", true, preview) as FrequentlyAskedQuestion[];
+  const team = await getAllDocuments("team", true, preview) as TeamMemberData[];
+
   /*
   const sponsorsRaw = await getAllDocuments("sponsor", true, preview) as SponsorData[];
   const siteSettings = (await getAllDocuments("siteSettings", false, preview))[0];

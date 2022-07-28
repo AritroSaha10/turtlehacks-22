@@ -8,22 +8,13 @@ import transition from "@util/anim/transition";
 
 import Banner from "@media/banner.png"
 import classArrayToString from "@util/styles/classNames";
+import ScrollingText from "@components/ScrollingText";
 
 const topLineVariants = {
   initial: {},
   animate: {
     transition: {
       staggerChildren: 0.3,
-    }
-  }
-};
-
-const bottomLineVariants = {
-  initial: {},
-  animate: {
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.2,
     }
   }
 };
@@ -64,8 +55,27 @@ const Home: FC = () => (
       >
         <div className="text-center">
           <div className="mb-4">
+            <ScrollingText text={[
+              "Compete at",
+              "Strive for success at",
+              "Create at",
+              "Enjoy free food at",
+              "Design at",
+              "Dream big at",
+              "Innovate at",
+              "Leave a legacy at",
+              "Connect at",
+              "Find opportunities at",
+              "Network at",
+              "Compete at",
+              "Win prizes at",
+            ]}/>
+
+            
+
+            {/*
             <m.div
-              variants={topLineVariants}
+              variants={bottomLineVariants}
               initial="initial"
               animate="animate"
               className={classArrayToString([
@@ -91,25 +101,31 @@ const Home: FC = () => (
                 </m.span>
               )}
             </m.div>
+                */}
 
-            <m.div
-              variants={bottomLineVariants}
-              initial="initial"
-              animate="animate"
+            <div
               className={classArrayToString([
-                "flex flex-wrap",
-                "justify-center",
+                "flex flex-col flex-wrap",
                 "gap-2",
-                "text-2xl lg:text-4xl",
-                "font-medium text-white"
+                "text-6xl sm:text-7xl lg:text-9xl",
+                "font-extrabold"
               ])}
             >
-              {subtitle.map(char =>
-                <m.span className="inline-block relative" variants={characterVariants} key={char}>
+              {title.map(char =>
+                <span
+                  className={classArrayToString([
+                    "inline-block relative",
+                    "pb-5",
+                    "bg-clip-text text-transparent",
+                    "bg-gradient-to-r",
+                    "from-emerald-500 to-cyan-500"
+                  ])}
+                  key={char}
+                >
                   {char}
-                </m.span>
+                </span>
               )}
-            </m.div>
+            </div>
           </div>
         </div>
 

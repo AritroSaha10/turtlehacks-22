@@ -79,7 +79,7 @@ export default function Footer() {
           alt="Logo"
         />
       </div>
-      
+
       <Link href="/sign-up">
         <a className={`px-9 py-3 rounded-xl text-lg ${buttonColoring}`}>
           Sponsor Us Today!
@@ -153,6 +153,16 @@ export default function Footer() {
           <Image src={InstagramLogo} width={30} height={30} alt="instagram" />
         </a>
       </div>
+
+      <hr className="h-px bg-white w-full lg:w-[40%] mt-6 mb-2" />
+
+      <p className='text-md text-gray-200 font-sans'>
+        Made with Next.js, Tailwind, and 💙 by
+        {" "}
+        <a href="https://aritrosaha.vercel.app" target="_blank" rel="noreferrer" className='text-blue-300 hover:text-blue-500 duration-150'>
+          Aritro Saha
+        </a>
+      </p>
     </footer>
   )
 }

@@ -13,15 +13,15 @@ export default function ScrollingText({ text }: { text: string[] }) {
             setTimeout(async () => {
                 // TODO: Is this how it's supposed to even work 💀
                 // TODO: Make this cleaner
-                await controls.start({ opacity: 0, y: -20, transition: { ...transition, duration: 0.5 } });
+                await controls.start({ opacity: 0, y: -20, transition: { ...transition, duration: 0.3 } });
 
                 setIdx(prevState => (prevState + 1) % text.length);
 
                 await controls.start({ opacity: 0, y: 30, transition: { duration: 0 } })
-                await controls.start({ opacity: 1, y: 0, transition: { ...transition, duration: 0.5 } })
+                await controls.start({ opacity: 1, y: 0, transition: { ...transition, duration: 0.3 } })
 
                 startLoop();
-            }, 2000);
+            }, 3000);
         };
 
         startLoop();

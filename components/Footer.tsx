@@ -82,7 +82,7 @@ export default function Footer() {
       
       <Link href="/sign-up">
         <a className={`px-9 py-3 rounded-xl text-lg ${buttonColoring}`}>
-          Register Today!
+          Sponsor Us Today!
         </a>
       </Link>
 

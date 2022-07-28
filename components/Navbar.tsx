@@ -31,11 +31,19 @@ const links = [
         priority: false
     },
     {
+        name: "Team",
+        link: "/#team",
+        id: "team",
+        priority: false
+    },
+    /*
+    {
         name: "Sign Up",
         link: "/sign-up",
         id: "call-to-action",
         priority: true
     },
+    */
 ];
 
 const bgSteps = [

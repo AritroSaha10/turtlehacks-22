@@ -156,7 +156,7 @@ const Home: FC = () => (
                 "duration-150"
               ])}
             >
-              Pre-Register Today! →
+              Sponsor Us Today! →
             </a>
           </Link>
         </div>

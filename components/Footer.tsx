@@ -80,11 +80,14 @@ export default function Footer() {
         />
       </div>
 
-      <Link href="/sign-up">
-        <a className={`px-9 py-3 rounded-xl text-lg ${buttonColoring}`}>
-          Sponsor Us Today!
-        </a>
-      </Link>
+      <a 
+        className={`px-9 py-3 rounded-xl text-lg ${buttonColoring}`} 
+        href="/documents/TurtleHacksSponsorshipPackage.pdf" 
+        target="_blank" 
+        rel="noreferrer"
+      >
+        Sponsor Us Today!
+      </a>
 
       <hr className="h-px bg-white w-full lg:w-[40%] my-6" />
 

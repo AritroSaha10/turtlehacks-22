@@ -160,21 +160,22 @@ const Home: FC = () => (
             </a>
           </Link>
 
-          <Link href="/sign-up">
-            <a
-              className={classArrayToString([
-                "py-4 px-6",
-                "mt-4",
-                "bg-emerald-600 hover:bg-emerald-700",
-                "rounded-lg",
-                "text-lg lg:text-2xl",
-                "text-white font-semibold",
-                "duration-150"
-              ])}
-            >
-              Sponsor Us
-            </a>
-          </Link>
+          <a
+            className={classArrayToString([
+              "py-4 px-6",
+              "mt-4",
+              "bg-emerald-600 hover:bg-emerald-700",
+              "rounded-lg",
+              "text-lg lg:text-2xl",
+              "text-white font-semibold",
+              "duration-150"
+            ])}
+            href="/documents/TurtleHacksSponsorshipPackage.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Sponsor Us
+          </a>
         </div>
       </div>
     </section>

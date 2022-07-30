@@ -10,14 +10,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             status: 405,
             message: "405 Method Not Allowed"
         });
+        return;
     }
 
     if (req.body.email === undefined) {
-        console.warn("Body does not include an email key. Ignoring...")
+        console.warn("Body does not include an email key. Ignoring...");
         res.status(400).json({
             status: 400,
             message: "400 Bad Request"
         });
+        return;
+    }
+
+    if (process.env.AIRTABLE_API_KEY === undefined) {
+        console.error("Airtable API key has not been provided. Crashing.");
+        res.status(500).json({
+            status: 500,
+            message: "500 Internal Server Error"
+        });
+        return;
     }
 
     // Try creating a new entry 5 times. If it doesn't work on the 5th, no point in trying again.

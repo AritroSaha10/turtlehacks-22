@@ -7,7 +7,7 @@ export enum Direction {
     RIGHT
 }
 
-export default function fadeFrom(direction: Direction, duration: number, delay: number, travelDistance: number) {
+export function fadeFromVariants(direction: Direction, duration: number, delay: number, travelDistance: number) {
     let baseVariants = {
         initial: {
             opacity: 0,
@@ -48,8 +48,12 @@ export default function fadeFrom(direction: Direction, duration: number, delay: 
         }
     }
 
+    return baseVariants
+}
+
+export default function fadeFrom(direction: Direction, duration: number, delay: number, travelDistance: number) {
     return {
-        variants: baseVariants,
+        variants: fadeFromVariants(direction, duration, delay, travelDistance),
         initial: "initial",
         animate: "animate"
     }

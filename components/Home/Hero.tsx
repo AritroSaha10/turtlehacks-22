@@ -36,7 +36,7 @@ const Home: FC = () => {
 
   useScrollPosition(({ currPos }) => {
     const scrollY = Math.abs(currPos.y);
-    const scale = 100 + (scrollY / 1000) * 50;
+    const scale = 100 + (scrollY / 1000) * 25;
     setBgScale(scale);
   })
 

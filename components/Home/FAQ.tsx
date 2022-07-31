@@ -16,11 +16,11 @@ export default function FAQ({ faq: faqRaw }) {
                 <h1 className="text-4xl text-white font-bold">Frequently Asked Questions</h1>
             </div>
 
-            <div className='flex flex-col lg:flex-row lg:gap-x-4 bg-white/20 p-6'>
+            <div className='flex flex-col lg:flex-row lg:gap-x-4 bg-black/20 p-6 lg:px-8'>
                 <div className='flex flex-col gap-x-4 rounded-xl lg:w-1/2'>
                     {faq.slice(0, faq.length / 2).map((data, idx) =>
                         <React.Fragment key={idx}>
-                            <Accordion {...data} keepSeparator />
+                            <Accordion {...data} />
                         </React.Fragment>
                     )}
                 </div>
@@ -28,7 +28,7 @@ export default function FAQ({ faq: faqRaw }) {
                 <div className='flex flex-col gap-x-4 rounded-xl lg:w-1/2'>
                     {faq.slice(faq.length / 2).map((data, idx) =>
                         <React.Fragment key={idx}>
-                            <Accordion {...data} keepSeparator />
+                            <Accordion {...data} />
                         </React.Fragment>
                     )}
                 </div>

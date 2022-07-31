@@ -1,29 +1,63 @@
 import { FC, useState } from "react";
-import {
-    Accordion as MaterialAccordion,
-    AccordionHeader,
-    AccordionBody
-} from "@material-tailwind/react";
+import { m, useAnimationControls } from "framer-motion"
+import { BiChevronLeft } from "react-icons/bi"
 
 interface Props {
     title: string,
     content: string,
-    keepSeparator?: boolean
 };
 
-const Accordion: FC<Props> = ({ title, content, keepSeparator }) => {
+const contentVariants = {
+    closed: {
+        opacity: 0,
+        height: 0,
+        marginTop: "0px"
+    },
+    open: {
+        opacity: 1,
+        height: "auto",
+        marginTop: "10px"
+    }
+}
+
+const arrowVariants = {
+    closed: {
+        rotate: "0deg"
+    },
+    open: {
+        rotate: "-90deg"
+    }
+}
+
+const Accordion: FC<Props> = ({ title, content }) => {
     const [open, setOpen] = useState(false);
+    const controls = useAnimationControls();
 
     const handleToggle = () => {
+        !open ? controls.start("open") : controls.start("closed");
         setOpen(!open);
     };
 
     return (
-        <MaterialAccordion open={open} onClick={handleToggle} className="border-2 border-white/50 px-4 relative mt-[-2px]">
-            <AccordionHeader className="text-white text-left">{title}</AccordionHeader>
-            <AccordionBody className="text-white mt-[-20px]">{content}</AccordionBody>
-        </MaterialAccordion>
-    );
+        <div className="p-4 border-2 border-white/50 relative mt-[-2px] w-full text-white">
+            <button className="flex justify-between items-center w-full" onClick={handleToggle}>
+                <h3 className="text-left text-xl font-semibold">{title}</h3>
+                <m.span variants={arrowVariants} initial="closed" animate={controls}>
+                    <BiChevronLeft />
+                </m.span>
+            </button>
+
+            <m.p
+                className="text-md overflow-hidden text-gray-100"
+                variants={contentVariants}
+                animate={controls}
+                initial="closed"
+                transition={{ ease: "easeInOut", duration: 0.2 }}
+            >
+                {content}
+            </m.p>
+        </div>
+    )
 }
 
 export default Accordion;

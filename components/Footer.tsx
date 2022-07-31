@@ -61,7 +61,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="flex flex-col justify-between gap-4 px-12 lg:px-20 py-8 bg-emerald-1000 items-center z-[99999999]">
+    <footer className="flex flex-col justify-between gap-4 px-12 lg:px-20 py-8 bg-emerald-1000 items-center z-[99999999] text-center sm:text-left">
       <div className="flex justify-between items-center gap-6 lg:w-1/3 mb-4">
         <div>
           <h2 className="text-4xl text-white">{name}</h2>
@@ -75,7 +75,7 @@ export default function Footer() {
           width={100}
           height={100}
           quality={100}
-          className="rounded-xl"
+          className="rounded-xl hidden sm:block"
           alt="Logo"
         />
       </div>
@@ -97,7 +97,7 @@ export default function Footer() {
           Sign up to our newsletter to stay connected!
         </p>
 
-        <form className="flex flex-col sm:flex-row items-center gap-2 mt-4" onSubmit={handleSubmit} noValidate>
+        <form className="flex flex-col sm:flex-row items-center gap-2 mt-4 text-center lg:text-left" onSubmit={handleSubmit} noValidate>
           <input
             className={`rounded-lg py-2 px-3 w-60 sm:w-72 align-middle text-white outline-none focus:ring-2 focus:ring-emerald-700 duration-200 bg-white/20 shadow-lg focus:shadow-none ${emailState == EmailState.Invalid && "ring-1 ring-red-600"}`}
             placeholder="Your email address"

@@ -51,7 +51,7 @@ export async function getStaticProps({ preview = false }) {
 
 export default function Home({ faq, team }: HomeProps) {
   return (
-    <Layout name="Home" noAnim home>
+    <Layout name="Hackathon" noAnim home>
       <div id="home" /> {/* For scrolling to the top */}
       <Hero />
       <WaveEffect />

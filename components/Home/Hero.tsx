@@ -143,12 +143,11 @@ const Home: FC = () => (
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-2 lg:gap-4 lg:mt-4 justify-center">
           <Link href="/#newsletter">
             <a
               className={classArrayToString([
                 "py-4 px-6",
-                "mt-4",
                 "bg-emerald-600 hover:bg-emerald-700",
                 "rounded-lg",
                 "text-lg lg:text-2xl",
@@ -163,7 +162,6 @@ const Home: FC = () => (
           <a
             className={classArrayToString([
               "py-4 px-6",
-              "mt-4",
               "bg-emerald-600 hover:bg-emerald-700",
               "rounded-lg",
               "text-lg lg:text-2xl",

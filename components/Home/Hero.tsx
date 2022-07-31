@@ -5,6 +5,7 @@ import { m } from "framer-motion"
 
 import { eventTimeShort } from '@util/config'
 import transition from "@util/anim/transition";
+import fadeFrom, { Direction } from "@util/anim/fadeFrom";
 
 import Banner from "@media/banner.png"
 import classArrayToString from "@util/styles/classNames";
@@ -15,6 +16,7 @@ const topLineVariants = {
   animate: {
     transition: {
       staggerChildren: 0.3,
+      delayChildren: 0.4
     }
   }
 };
@@ -25,7 +27,6 @@ const characterVariants = {
 };
 
 const title = "Turtle Hacks".toUpperCase().split(' ');
-const subtitle = "A subtitle".split(' ');
 
 const Home: FC = () => (
   <>
@@ -71,16 +72,13 @@ const Home: FC = () => (
               "Win prizes at",
             ]} />
 
-
-
-            {/*
             <m.div
-              variants={bottomLineVariants}
+              variants={topLineVariants}
               initial="initial"
               animate="animate"
               className={classArrayToString([
                 "flex flex-col flex-wrap",
-                "gap-2",
+                "gap-1",
                 "text-6xl sm:text-7xl lg:text-9xl",
                 "font-extrabold"
               ])}
@@ -89,7 +87,6 @@ const Home: FC = () => (
                 <m.span
                   className={classArrayToString([
                     "inline-block relative",
-                    "pb-5",
                     "bg-clip-text text-transparent",
                     "bg-gradient-to-r",
                     "from-emerald-500 to-cyan-500"
@@ -101,35 +98,11 @@ const Home: FC = () => (
                 </m.span>
               )}
             </m.div>
-                */}
-
-            <div
-              className={classArrayToString([
-                "flex flex-col flex-wrap",
-                "gap-2",
-                "text-6xl sm:text-7xl lg:text-9xl",
-                "font-extrabold"
-              ])}
-            >
-              {title.map(char =>
-                <span
-                  className={classArrayToString([
-                    "inline-block relative",
-                    "pb-5",
-                    "bg-clip-text text-transparent",
-                    "bg-gradient-to-r",
-                    "from-emerald-500 to-cyan-500"
-                  ])}
-                  key={char}
-                >
-                  {char}
-                </span>
-              )}
-            </div>
           </div>
         </div>
 
-        <div
+        <m.div
+          {...fadeFrom(Direction.BOTTOM, 1.5, 1, 30)}
           className={classArrayToString([
             "md:w-3/4 lg:w-1/2",
             "mb-6",
@@ -139,27 +112,34 @@ const Home: FC = () => (
           ])}
         >
           <p className="text-2xl text-center font-light">
+            Hack to save the planet.
+          </p>
+
+          <p className="text-2xl text-center font-light">
             Happening during {eventTimeShort}!
           </p>
-        </div>
+        </m.div>
 
         <div className="flex flex-wrap gap-2 lg:gap-4 lg:mt-4 justify-center">
           <Link href="/#newsletter">
-            <a
+            <m.a
+              {...fadeFrom(Direction.LEFT, 0.8, 1.7, 30)}
               className={classArrayToString([
                 "py-4 px-6",
                 "bg-emerald-600 hover:bg-emerald-700",
                 "rounded-lg",
                 "text-lg lg:text-2xl",
                 "text-white font-semibold",
-                "duration-150"
+                "duration-150",
+                "hover:cursor-pointer"
               ])}
             >
               Join our Newsletter
-            </a>
+            </m.a>
           </Link>
 
-          <a
+          <m.a
+            {...fadeFrom(Direction.RIGHT, 0.8, 1.7, 30)}
             className={classArrayToString([
               "py-4 px-6",
               "bg-emerald-600 hover:bg-emerald-700",
@@ -173,7 +153,7 @@ const Home: FC = () => (
             rel="noreferrer"
           >
             Sponsor Us
-          </a>
+          </m.a>
         </div>
       </div>
     </section>

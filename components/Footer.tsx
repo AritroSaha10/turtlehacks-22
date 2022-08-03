@@ -41,7 +41,7 @@ export default function Footer() {
     setEmailState(EmailState.Sending);
 
     try {
-      const startingTime = Date.now();
+      const startingTime = new Date().getTime();
 
       await axios.post("/api/addToNewsletter", {
         email: email
@@ -49,7 +49,7 @@ export default function Footer() {
 
       // Slow down animation to take at least 300ms on user end so it's smoother
       await new Promise(resolve => {
-        setTimeout(resolve.bind(null, null), 300 - (Date.now() - startingTime));
+        setTimeout(resolve.bind(null, null), 300 - (new Date().getTime() - startingTime));
       });
     } catch (e) {
       // We don't need the user to know of the error, but log it for later uses

@@ -36,10 +36,10 @@ export interface TeamMemberData {
 };
 
 const iconMapping = {
-    "GitHub": <FaGithub className="text-xl text-white hover:text-gray-300 duration-150" />,
-    "Instagram": <FaInstagram className="text-xl text-white hover:text-gray-300 duration-150" />,
-    "LinkedIn": <FaLinkedin className="text-xl text-white hover:text-gray-300 duration-150" />,
-    "Website": <MdWeb className="text-xl text-white hover:text-gray-300 duration-150" />
+    "GitHub": <FaGithub className="text-xl text-white hover:text-gray-300 duration-150" title="GitHub" />,
+    "Instagram": <FaInstagram className="text-xl text-white hover:text-gray-300 duration-150" title="Instagram" />,
+    "LinkedIn": <FaLinkedin className="text-xl text-white hover:text-gray-300 duration-150" title="LinkedIn" />,
+    "Website": <MdWeb className="text-xl text-white hover:text-gray-300 duration-150" title="Website" />
 }
 
 const TeamMember = ({ position, name, image, links }: TeamMemberData) => {

@@ -9,6 +9,8 @@ export default function ScrollingText({ text }: { text: string[] }) {
     const controls = useAnimationControls()
 
     useEffect(() => {
+        controls.start({ opacity: 1, y: 0, transition: {...transition, duraiton: 0.4 } })
+
         const startLoop = () => {
             setTimeout(async () => {
                 // TODO: Is this how it's supposed to even work 💀
@@ -21,7 +23,7 @@ export default function ScrollingText({ text }: { text: string[] }) {
                 await controls.start({ opacity: 1, y: 0, transition: { ...transition, duration: 0.3 } })
 
                 startLoop();
-            }, 3000);
+            }, 2500);
         };
 
         startLoop();
@@ -38,7 +40,7 @@ export default function ScrollingText({ text }: { text: string[] }) {
                 "mb-2"
             ])}
         >
-            <m.span animate={controls}>
+            <m.span animate={controls} initial={{ opacity: 0, y: -30 }}>
                 {text[currIdx]}
             </m.span>
         </div>

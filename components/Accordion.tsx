@@ -57,7 +57,7 @@ const Accordion: FC<Props> = ({ title, content }) => {
                 {content}
             </m.p>
         </div>
-    )
+    );
 }
 
 export default Accordion;

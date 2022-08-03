@@ -134,22 +134,21 @@ const Home: FC = () => {
           </m.div>
 
           <div className="flex flex-wrap gap-2 lg:gap-4 lg:mt-4 justify-center">
-            <Link href="/#newsletter">
-              <m.a
-                {...fadeFrom(Direction.LEFT, 0.8, 1.7, 30)}
-                className={classArrayToString([
-                  "py-4 px-6",
-                  "bg-emerald-600 hover:bg-emerald-700",
-                  "rounded-lg",
-                  "text-lg lg:text-2xl",
-                  "text-white font-semibold",
-                  "duration-150",
-                  "hover:cursor-pointer"
-                ])}
-              >
-                Join our Newsletter
-              </m.a>
-            </Link>
+            <m.a
+              {...fadeFrom(Direction.LEFT, 0.8, 1.7, 30)}
+              className={classArrayToString([
+                "py-4 px-6",
+                "bg-emerald-600 hover:bg-emerald-700",
+                "rounded-lg",
+                "text-lg lg:text-2xl",
+                "text-white font-semibold",
+                "duration-150",
+                "hover:cursor-pointer"
+              ])}
+              href="#newsletter"
+            >
+              Join our Newsletter
+            </m.a>
 
             <m.a
               {...fadeFrom(Direction.RIGHT, 0.8, 1.7, 30)}

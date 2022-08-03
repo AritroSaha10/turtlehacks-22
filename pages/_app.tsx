@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
     // @ts-ignore GoatCounter is imported in _document.tsx
     window.goatcounter = { no_onload: true }
   }, []);
-  
+
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
       // Initialize Firebase Analytics
@@ -28,10 +28,14 @@ function MyApp({ Component, pageProps }) {
         });
         */
 
-        // @ts-ignore GoatCounter is imported in _document.tsx
-        window.goatcounter.count({
-          path: window.location.pathname + window.location.search + window.location.hash
-        });
+        try {
+          // @ts-ignore GoatCounter is imported in _document.tsx
+          window.goatcounter.count({
+            path: window.location.pathname + window.location.search + window.location.hash
+          });
+        } catch (e) {
+          console.warn("GoatCounter doesn't exist.")
+        }
       };
 
       router.events.on('routeChangeComplete', logEventHandler);

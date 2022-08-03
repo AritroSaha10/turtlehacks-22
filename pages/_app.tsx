@@ -1,26 +1,31 @@
-/*
+
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-
+import { LazyMotion, domAnimation } from 'framer-motion'
+/*
 import analytics from "../util/firebase/analytics"
 import { logEvent } from "firebase/analytics"
 */
-import { LazyMotion, domAnimation } from 'framer-motion'
 
 import '@styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  /*
   const router = useRouter();
 
   useEffect(() => {
-    
     if (process.env.NODE_ENV === "production") {
       // Initialize Firebase Analytics
       const logEventHandler = (url: string) => {
+        /*
         logEvent(analytics(), "screen_view", {
           firebase_screen: url,
           firebase_screen_class: "web"
+        });
+        */
+       
+        // @ts-ignore GoatCounter is imported in _document.tsx
+        window.goatcounter.count({
+          path: window.location.pathname + window.location.search + window.location.hash
         });
       };
 
@@ -32,9 +37,8 @@ function MyApp({ Component, pageProps }) {
         router.events.off('routeChangeComplete', logEventHandler);
       };
     }
-    
+
   }, [router.events]);
-  */
 
   return (
     <LazyMotion features={domAnimation} strict>

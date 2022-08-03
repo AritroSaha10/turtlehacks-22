@@ -9,10 +9,11 @@ export default function Document() {
                     rel="stylesheet"
                 />
             </Head>
-            
+
             <body>
                 <Main />
                 <NextScript />
+                <script data-goatcounter="https://turtlehacks.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
             </body>
         </Html>
     )

@@ -28,18 +28,16 @@ function MyApp({ Component, pageProps }) {
         });
         */
 
-        try {
+        if ("goatcounter" in window && window["goatcounter"]["count"] !== undefined) {
           // @ts-ignore GoatCounter is imported in _document.tsx
           window.goatcounter.count({
-            path: window.location.pathname + window.location.search + window.location.hash
+            path: url
           });
-        } catch (e) {
-          console.warn("GoatCounter doesn't exist.")
         }
       };
 
       router.events.on('routeChangeComplete', logEventHandler);
-      logEventHandler(window.location.pathname); // Logs first page that the user visits
+      logEventHandler(router.asPath); // Logs first page that the user visits
 
       // Remvove the event listener for firebase Analytics after unmount
       return () => {

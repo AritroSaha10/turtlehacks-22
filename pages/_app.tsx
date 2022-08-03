@@ -13,11 +13,6 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    // @ts-ignore GoatCounter is imported in _document.tsx
-    window.goatcounter = { no_onload: true }
-  }, []);
-
-  useEffect(() => {
     if (process.env.NODE_ENV === "production") {
       // Initialize Firebase Analytics
       const logEventHandler = (url: string) => {
@@ -45,7 +40,7 @@ function MyApp({ Component, pageProps }) {
       };
     }
 
-  }, [router.events]);
+  }, [router.events, router.asPath]);
 
   return (
     <LazyMotion features={domAnimation} strict>

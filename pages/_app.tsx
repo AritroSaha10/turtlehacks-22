@@ -13,6 +13,11 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    // @ts-ignore GoatCounter is imported in _document.tsx
+    window.goatcounter = { no_onload: true }
+  }, []);
+  
+  useEffect(() => {
     if (process.env.NODE_ENV === "production") {
       // Initialize Firebase Analytics
       const logEventHandler = (url: string) => {
@@ -22,7 +27,7 @@ function MyApp({ Component, pageProps }) {
           firebase_screen_class: "web"
         });
         */
-       
+
         // @ts-ignore GoatCounter is imported in _document.tsx
         window.goatcounter.count({
           path: window.location.pathname + window.location.search + window.location.hash

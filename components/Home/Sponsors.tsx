@@ -45,31 +45,31 @@ export default function Sponsors({ sponsors }: { sponsors: SponsorList }) {
             <div className='flex flex-col gap-12 w-full items-center'>
                 {sponsors.platinum.length > 0 && (
                     <div className='flex flex-wrap gap-6 lg:gap-12 items-center justify-center'>
-                        {sponsors.platinum.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={140} />)}
+                        {sponsors.platinum.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={160} />)}
                     </div>
                 )}
 
                 {sponsors.gold.length > 0 && (
                     <div className='flex flex-wrap gap-6 lg:gap-12 items-center justify-center'>
-                        {sponsors.gold.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={90} />)}
+                        {sponsors.gold.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={140} />)}
                     </div>
                 )}
 
                 {sponsors.silver.length > 0 && (
                     <div className='flex flex-wrap gap-6 items-center justify-center'>
-                        {sponsors.silver.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={70} />)}
+                        {sponsors.silver.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={120} />)}
                     </div>
                 )}
 
                 {sponsors.bronze.length > 0 && (
                     <div className='flex flex-wrap gap-6 items-center justify-center'>
-                        {sponsors.bronze.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={60} />)}
+                        {sponsors.bronze.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={100} />)}
                     </div>
                 )}
 
                 {sponsors.none.length ? (
                     <div className='flex flex-wrap gap-6 items-center justify-center'>
-                        {sponsors.none.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={50} />)}
+                        {sponsors.none.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={80} />)}
                     </div>
                 ) : <></>}
             </div>

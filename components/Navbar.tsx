@@ -31,6 +31,12 @@ const links = [
         priority: false
     },
     {
+        name: "Sponsors",
+        link: "/#sponsors",
+        id: "sponsors",
+        priority: false
+    },
+    {
         name: "Team",
         link: "/#team",
         id: "team",

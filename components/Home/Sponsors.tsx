@@ -67,11 +67,11 @@ export default function Sponsors({ sponsors }: { sponsors: SponsorList }) {
                     </div>
                 )}
 
-                {sponsors.none.length ? (
+                {/*sponsors.none.length ? (
                     <div className='flex flex-wrap gap-6 items-center justify-center'>
                         {sponsors.none.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={80} />)}
                     </div>
-                ) : <></>}
+                ) : <></>*/}
             </div>
         </section>
     )

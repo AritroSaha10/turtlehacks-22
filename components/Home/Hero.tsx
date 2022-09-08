@@ -160,11 +160,30 @@ const Home: FC = () => {
                 "text-white font-semibold",
                 "duration-150"
               ])}
-              href="/documents/TurtleHacksSponsorshipPackage.pdf"
+              href="https://docs.google.com/forms/d/1RTnYbQmMt0MRJxDAhLUSRovyJ3SVGE0HLfeWFSX0tJA/edit"
               target="_blank"
               rel="noreferrer"
             >
               Sponsor Us
+            </m.a>
+          </div>
+
+          <div className="flex flex-wrap gap-2 lg:gap-4 lg:mt-4 justify-center">
+            <m.a
+              {...fadeFrom(Direction.BOTTOM, 0.8, 2.0, 30)}
+              className={classArrayToString([
+                "py-4 px-6",
+                "bg-emerald-600 hover:bg-emerald-700",
+                "rounded-lg",
+                "text-lg lg:text-2xl",
+                "text-white font-semibold",
+                "duration-150"
+              ])}
+              href="/documents/TurtleHacksSponsorshipPackage.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Executive Applications
             </m.a>
           </div>
         </div>

@@ -160,7 +160,7 @@ const Home: FC = () => {
                 "text-white font-semibold",
                 "duration-150"
               ])}
-              href="https://docs.google.com/forms/d/1RTnYbQmMt0MRJxDAhLUSRovyJ3SVGE0HLfeWFSX0tJA/edit"
+              href="/documents/TurtleHacksSponsorshipPackage.pdf"
               target="_blank"
               rel="noreferrer"
             >
@@ -179,7 +179,7 @@ const Home: FC = () => {
                 "text-white font-semibold",
                 "duration-150"
               ])}
-              href="/documents/TurtleHacksSponsorshipPackage.pdf"
+              href="https://docs.google.com/forms/d/1RTnYbQmMt0MRJxDAhLUSRovyJ3SVGE0HLfeWFSX0tJA/edit"
               target="_blank"
               rel="noreferrer"
             >

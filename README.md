@@ -20,8 +20,6 @@ Tailwind CSS
 
 Sanity CMS
 
-Airtable
-
 Vercel
 
 ## Copyright

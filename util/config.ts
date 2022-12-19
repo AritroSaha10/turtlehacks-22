@@ -1,7 +1,7 @@
 const name = "TurtleHacks"
-const eventTimeShort = "Feb. 24th - 26th"
-const eventTime = "February 24th - 26th, 2023"
-const description = `TurtleHacks is a hackathon happening from February 24th to 26th focused on the environment.`
+const eventTimeShort = "Mar. 3rd - 5th"
+const eventTime = "March 3rd - 5th, 2023"
+const description = `TurtleHacks is a hackathon happening from March 3rd to 5th focused on the environment.`
 const image = {
     src: "https://i.imgur.com/z0ajy2J.png",
     type: "image/png",

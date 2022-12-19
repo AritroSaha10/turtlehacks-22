@@ -5,11 +5,13 @@ import Image from 'next/image'
 import axios from 'axios'
 
 import EmailRegex from '@util/EmailRegex'
-import { discordLink, eventTime, instagramLink, linkedinLink, name } from '@util/config'
+import { discordLink, eventTime, facebookLink, instagramLink, linkedinLink, name, tiktokLink } from '@util/config'
 
 import logo from '@media/logo.png'
 import InstagramLogo from "@media/ig.png"
-import { FaLinkedin, FaDiscord } from 'react-icons/fa'
+import FacebookLogo from "@media/fb.png"
+import TikTokLogo from "@media/tiktok.png"
+import { FaLinkedin, FaDiscord, FaTiktok } from 'react-icons/fa'
 
 const buttonColoring =
   'bg-emerald-700 text-white hover:bg-white hover:text-emerald-700 active:bg-emerald-500 active:text-white transition-all duration-300'
@@ -154,6 +156,26 @@ export default function Footer() {
           title="Instagram"
         >
           <Image src={InstagramLogo} width={30} height={30} alt="instagram" />
+        </a>
+
+        <a
+          href={facebookLink}
+          className="text-[#F77737] hover:text-[#F77737]/75 active:text-[#F77737]/50 duration-200"
+          target="_blank"
+          rel="noreferrer"
+          title="Instagram"
+        >
+          <Image src={FacebookLogo} width={30} height={30} alt="facebook" />
+        </a>
+
+        <a
+          href={tiktokLink}
+          className="text-[#00f2ea] hover:text-[#ff0050]/75 active:text-[#ff0050]/50 duration-200"
+          target="_blank"
+          rel="noreferrer"
+          title="Instagram"
+        >
+          <Image src={TikTokLogo} width={30} height={30} alt="tiktok" />
         </a>
       </div>
 

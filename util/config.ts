@@ -13,5 +13,7 @@ const twitterCreator = "@TurtleHacks"
 const discordLink = "#"
 const linkedinLink = "https://www.linkedin.com/company/turtlehacks/"
 const instagramLink = "https://www.instagram.com/turtle.hacks/"
+const facebookLink = "https://www.facebook.com/TurtleHacks/"
+const tiktokLink = "https://www.tiktok.com/@turtlehacks2022"
 
-export { name, description, image, eventTime, eventTimeShort, twitterCreator, discordLink, linkedinLink, instagramLink }
+export { name, description, image, eventTime, eventTimeShort, twitterCreator, discordLink, linkedinLink, instagramLink, facebookLink, tiktokLink }

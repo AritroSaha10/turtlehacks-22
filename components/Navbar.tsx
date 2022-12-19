@@ -42,14 +42,12 @@ const links = [
         id: "team",
         priority: false
     },
-    /*
     {
-        name: "Sign Up",
-        link: "/sign-up",
+        name: "Join Newsletter",
+        link: "/#newsletter",
         id: "call-to-action",
         priority: true
     },
-    */
 ];
 
 const bgSteps = [

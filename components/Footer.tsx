@@ -63,7 +63,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="flex flex-col justify-between gap-4 px-12 lg:px-20 py-8 bg-emerald-1000 items-center z-[99999999] text-center sm:text-left">
+    <footer className="flex flex-col justify-between gap-4 px-12 lg:px-20 py-8 bg-emerald-1000 items-center z-[99999999] text-center sm:text-left" id="footer">
       <div className="flex justify-between items-center gap-6 lg:w-1/3 mb-4">
         <div>
           <h2 className="text-4xl text-white">{name}</h2>

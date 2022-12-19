@@ -110,7 +110,9 @@ export default function Footer() {
           />
           <input
             type="submit"
-            className={`rounded-lg py-2 px-4 w-60 sm:w-auto text-md ${buttonColoring} hover:cursor-pointer`}
+            disabled={emailState === EmailState.Sending}
+            className={`rounded-lg py-2 px-4 w-60 sm:w-auto text-md ${buttonColoring} hover:cursor-pointer disabled:bg-emerald-900 disabled:text-white/50 disabled:cursor-wait`}
+            value={emailState === EmailState.Sending ? "Submitting..." : "Submit"}
           />
         </form>
 

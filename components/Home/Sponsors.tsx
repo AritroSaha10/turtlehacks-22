@@ -63,7 +63,7 @@ export default function Sponsors({ sponsors }: { sponsors: SponsorList }) {
 
                 {sponsors.bronze.length > 0 && (
                     <div className='flex flex-wrap gap-6 items-center justify-center'>
-                        {sponsors.bronze.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={100} />)}
+                        {sponsors.bronze.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={60} />)}
                     </div>
                 )}
 

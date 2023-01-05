@@ -135,23 +135,62 @@ const Home: FC = () => {
 						</p>
 					</m.div>
 
-					<div className="flex flex-wrap gap-2 lg:gap-4 lg:mt-4 justify-center">
+					<m.a
+						{...fadeFrom(Direction.TOP, 0.8, 1.7, 30)}
+						className={classArrayToString([
+							'py-4 px-6',
+							'bg-emerald-600 hover:bg-emerald-700',
+							'rounded-lg',
+							'text-lg lg:text-2xl',
+							'text-white font-semibold',
+							'duration-150',
+							'hover:cursor-pointer',
+							'text-center'
+						])}
+						href={registrationLink}
+						target="_blank"
+						rel="noreferrer"
+					>
+						Hacker Registration
+					</m.a>
+
+					<div className="flex flex-wrap gap-2 lg:gap-4 mt-2 lg:mt-4 justify-center">
 						<m.a
 							{...fadeFrom(Direction.LEFT, 0.8, 1.7, 30)}
 							className={classArrayToString([
-								'py-4 px-6',
+								'p-4 sm:px-6',
 								'bg-emerald-600 hover:bg-emerald-700',
 								'rounded-lg',
-								'text-lg lg:text-2xl',
-								'text-white font-semibold',
+								'text-lg lg:text-xl',
+								'text-white font-medium',
 								'duration-150',
 								'hover:cursor-pointer',
+								'text-center',
 							])}
 							href={registrationLink}
 							target="_blank"
 							rel="noreferrer"
 						>
-							Sign Up Today!
+							Workshop Lead Applications
+						</m.a>
+
+						<m.a
+							{...fadeFrom(Direction.RIGHT, 0.8, 1.7, 30)}
+							className={classArrayToString([
+								'py-4 px-6',
+								'bg-emerald-600 hover:bg-emerald-700',
+								'rounded-lg',
+								'text-lg lg:text-xl',
+								'text-white font-medium',
+								'duration-150',
+								'hover:cursor-pointer',
+								'text-center'
+							])}
+							href={registrationLink}
+							target="_blank"
+							rel="noreferrer"
+						>
+							Mentor Applications
 						</m.a>
 					</div>
 				</div>

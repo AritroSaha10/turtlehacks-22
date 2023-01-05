@@ -171,7 +171,7 @@ const Home: FC = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							Workshop Lead Applications
+							Become a Workshop Lead
 						</m.a>
 
 						<m.a
@@ -190,7 +190,7 @@ const Home: FC = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							Mentor Applications
+							Become a Mentor
 						</m.a>
 					</div>
 				</div>

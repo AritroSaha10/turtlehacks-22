@@ -72,6 +72,15 @@ export default function Sponsors({ sponsors }: { sponsors: SponsorList }) {
                         {sponsors.none.map((data: SponsorData) => <SponsorCard {...data} key={data.name} imageHeight={80} />)}
                     </div>
                 ) : <></>*/}
+
+                <a
+                    className="px-9 py-3 rounded-xl text-lg font-semibold bg-emerald-700 text-white hover:bg-white hover:text-emerald-700 active:bg-emerald-500 active:text-white transition-all duration-300"
+                    href="/documents/TurtleHacksSponsorshipPackage.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Sponsor Us Today!
+                </a>
             </div>
         </section>
     )

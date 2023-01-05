@@ -5,7 +5,7 @@ import Image from 'next/image'
 import axios from 'axios'
 
 import EmailRegex from '@util/EmailRegex'
-import { discordLink, eventTime, facebookLink, instagramLink, linkedinLink, name, tiktokLink } from '@util/config'
+import { discordLink, eventTime, facebookLink, instagramLink, linkedinLink, name, registrationLink, tiktokLink } from '@util/config'
 
 import logo from '@media/logo.png'
 import InstagramLogo from "@media/ig.png"
@@ -84,11 +84,11 @@ export default function Footer() {
 
       <a 
         className={`px-9 py-3 rounded-xl text-lg ${buttonColoring}`} 
-        href="/documents/TurtleHacksSponsorshipPackage.pdf" 
+        href={registrationLink}
         target="_blank" 
         rel="noreferrer"
       >
-        Sponsor Us Today!
+        Sign Up!
       </a>
 
       <hr className="h-px bg-white w-full lg:w-[40%] my-6" />

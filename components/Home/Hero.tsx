@@ -7,7 +7,7 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import ScrollingText from '@components/ScrollingText';
 
 import classArrayToString from '@util/styles/classNames';
-import { eventTimeShort } from '@util/config';
+import { eventTimeShort, registrationLink } from '@util/config';
 
 import transition from '@util/anim/transition';
 import fadeFrom, { Direction } from '@util/anim/fadeFrom';
@@ -147,26 +147,11 @@ const Home: FC = () => {
 								'duration-150',
 								'hover:cursor-pointer',
 							])}
-							href="#newsletter"
-						>
-							Join our Newsletter
-						</m.a>
-
-						<m.a
-							{...fadeFrom(Direction.RIGHT, 0.8, 1.7, 30)}
-							className={classArrayToString([
-								'py-4 px-6',
-								'bg-emerald-600 hover:bg-emerald-700',
-								'rounded-lg',
-								'text-lg lg:text-2xl',
-								'text-white font-semibold',
-								'duration-150',
-							])}
-							href="/documents/TurtleHacksSponsorshipPackage.pdf"
+							href={registrationLink}
 							target="_blank"
 							rel="noreferrer"
 						>
-							Sponsor Us
+							Sign Up Today!
 						</m.a>
 					</div>
 				</div>

@@ -36,7 +36,7 @@ const SponsorCard = ({ name, link, image, imageHeight }: SponsorData) => {
 
 export default function Sponsors({ sponsors }: { sponsors: SponsorList }) {
     return (
-        <section className="flex flex-col p-10 items-center md:py-16 md:p-20 lg:px-32 xl:px-40 items-left bg-cyan-800 z-30" id="sponsors">
+        <section className="flex flex-col p-10 items-center md:py-16 md:p-20 lg:px-32 xl:px-40 items-lef bg-emerald-800 z-30" id="sponsors">
             <div className="flex flex-col text-center mb-8">
                 <span className="text-lg text-emerald-200 font-semibold">Making it possible</span>
                 <h1 className="text-4xl text-white font-bold">Sponsors</h1>

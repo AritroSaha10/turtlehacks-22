@@ -17,7 +17,7 @@ export default function WaveEffect({ reverse } : { reverse?: boolean }) {
                 </svg>
             </div>
 
-            <div className='h-[300px]' />
+            <div className='h-[299px]' />
         </div>
     )
 }

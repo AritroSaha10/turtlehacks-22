@@ -151,7 +151,7 @@ const Home: FC = () => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						Hacker Registration
+						In-Person Hacker Registration
 					</m.a>
 
 					<div className="flex flex-wrap gap-2 lg:gap-4 mt-2 lg:mt-4 justify-center">

@@ -74,7 +74,7 @@ export default function Sponsors({ sponsors }: { sponsors: SponsorList }) {
                 ) : <></>*/}
 
                 <a
-                    className="px-9 py-4 rounded-xl text-2xl font-semibold bg-emerald-700 text-white hover:bg-white hover:text-emerald-700 active:bg-emerald-500 active:text-white transition-all duration-300"
+                    className="px-9 py-4 rounded-xl text-2xl font-semibold bg-emerald-700 text-white hover:bg-white hover:text-emerald-700 active:bg-emerald-500 active:text-white transition-all duration-300 text-center"
                     href="/documents/TurtleHacksSponsorshipPackage.pdf"
                     target="_blank"
                     rel="noreferrer"

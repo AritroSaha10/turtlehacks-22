@@ -88,7 +88,7 @@ export default function Footer() {
         target="_blank" 
         rel="noreferrer"
       >
-        Sign Up!
+        In-Person Hacker Registration
       </a>
 
       <hr className="h-px bg-white w-full lg:w-[40%] my-6" />

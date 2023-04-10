@@ -16,6 +16,6 @@ const instagramLink = "https://www.instagram.com/turtle.hacks/"
 const facebookLink = "https://www.facebook.com/TurtleHacks/"
 const tiktokLink = "https://www.tiktok.com/@turtlehacks2022"
 
-const registrationLink = "https://forms.gle/h5yzdVWeVzXQdJTB9"
+const registrationLink = "https://forms.gle/e7W7dhFUjkSi7gbi8"
 
 export { name, description, image, eventTime, eventTimeShort, twitterCreator, discordLink, linkedinLink, instagramLink, facebookLink, tiktokLink, registrationLink }

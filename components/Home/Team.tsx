@@ -84,7 +84,7 @@ const TeamMember = ({ position, name, image, links }: TeamMemberData) => {
 
 export default function Team({ team }: { team: TeamMemberData[] }) {
     return (
-        <section className="flex p-10 flex-col items-center lg:p-20 xl:px-40 bg-emerald-800 z-[30]" id="team">
+        <section className="flex p-10 flex-col items-center lg:p-20 xl:px-40 bg-cyan-800 z-[30]" id="team">
             <div className="flex flex-col text-center mb-8">
                 <span className="text-lg text-emerald-200 font-semibold">The people behind it all</span>
                 <h1 className="text-4xl text-white font-bold">Team</h1>

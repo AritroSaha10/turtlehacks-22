@@ -7,7 +7,7 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import ScrollingText from '@components/ScrollingText';
 
 import classArrayToString from '@util/styles/classNames';
-import { eventTimeShort, registrationLink } from '@util/config';
+import { eventTimeShort, registrationLink, mentorRegistrationLink, workshopLeadRegistrationLink } from '@util/config';
 
 import transition from '@util/anim/transition';
 import fadeFrom, { Direction } from '@util/anim/fadeFrom';
@@ -167,7 +167,7 @@ const Home: FC = () => {
 								'hover:cursor-pointer',
 								'text-center',
 							])}
-							href={registrationLink}
+							href={workshopLeadRegistrationLink}
 							target="_blank"
 							rel="noreferrer"
 						>
@@ -186,7 +186,7 @@ const Home: FC = () => {
 								'hover:cursor-pointer',
 								'text-center'
 							])}
-							href={registrationLink}
+							href={mentorRegistrationLink}
 							target="_blank"
 							rel="noreferrer"
 						>

@@ -24,7 +24,7 @@ const cardData: DetailCardData[] = [
     {
         title: "When",
         icon: <HiCalendar className='text-emerald-600' />,
-        content: "In-person: Sat, May 13th: 10AM to 4PM \nOnline: Fri, May 12th @ 5PM to Sun, May 14th @ 9AM"
+        content: "In-person: Sat, May 13th: 10AM to 6PM \nOnline: Fri, May 12th @ 5PM to Sun, May 14th @ 9AM"
     },
 ];
 

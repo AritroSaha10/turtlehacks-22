@@ -10,7 +10,7 @@ const image = {
 }
 
 const twitterCreator = "@TurtleHacks"
-const discordLink = "#"
+const discordLink = "https://discord.gg/QpYNSTFjEk"
 const linkedinLink = "https://www.linkedin.com/company/turtlehacks/"
 const instagramLink = "https://www.instagram.com/turtle.hacks/"
 const facebookLink = "https://www.facebook.com/TurtleHacks/"

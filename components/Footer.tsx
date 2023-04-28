@@ -140,7 +140,6 @@ export default function Footer() {
           <FaLinkedin />
         </a>
 
-        {/*
         <a
           href={discordLink}
           className="text-[#5865F2] hover:text-[#5865F2]/75 active:text-[#5865F2]/50 duration-200"
@@ -150,7 +149,6 @@ export default function Footer() {
         >
           <FaDiscord />
         </a>
-        */}
 
         <a
           href={instagramLink}

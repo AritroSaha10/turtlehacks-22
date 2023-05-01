@@ -12,6 +12,7 @@ import InstagramLogo from "@media/ig.png"
 import FacebookLogo from "@media/fb.png"
 import TikTokLogo from "@media/tiktok.png"
 import { FaLinkedin, FaDiscord, FaTiktok } from 'react-icons/fa'
+import { SiDevpost } from 'react-icons/si'
 
 const buttonColoring =
   'bg-emerald-700 text-white hover:bg-white hover:text-emerald-700 active:bg-emerald-500 active:text-white transition-all duration-300'
@@ -151,6 +152,16 @@ export default function Footer() {
         </a>
 
         <a
+          href={discordLink}
+          className="text-[#087aa6] hover:text-[#087aa6]/75 active:text-[#087aa6]/50 duration-200"
+          target="_blank"
+          rel="noreferrer"
+          title="Discord"
+        >
+          <SiDevpost />
+        </a>
+
+        <a
           href={instagramLink}
           className="text-[#F77737] hover:text-[#F77737]/75 active:text-[#F77737]/50 duration-200"
           target="_blank"
@@ -165,7 +176,7 @@ export default function Footer() {
           className="text-[#F77737] hover:text-[#F77737]/75 active:text-[#F77737]/50 duration-200"
           target="_blank"
           rel="noreferrer"
-          title="Instagram"
+          title="Facebook"
         >
           <Image src={FacebookLogo} width={30} height={30} alt="facebook" />
         </a>
@@ -175,7 +186,7 @@ export default function Footer() {
           className="text-[#00f2ea] hover:text-[#ff0050]/75 active:text-[#ff0050]/50 duration-200"
           target="_blank"
           rel="noreferrer"
-          title="Instagram"
+          title="TikTok"
         >
           <Image src={TikTokLogo} width={30} height={30} alt="tiktok" />
         </a>

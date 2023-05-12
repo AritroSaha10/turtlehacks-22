@@ -39,7 +39,7 @@ const timetable: Day[] = [
                 time: "9:30 PM"
             },
             {
-                name: "Game Night - skribbl.io",
+                name: "Game Night",
                 time: "10:30 PM"
             },
         ]

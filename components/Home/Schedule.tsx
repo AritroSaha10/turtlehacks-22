@@ -135,7 +135,7 @@ function DayCol(dayData: Day) {
     return (<>
         <div className="inline-flex relative m-[15px]">
             <table className="text-white border-collapse w-fit min-w-[30vw]">
-                <thead className="py-2 text-center bg-green-800">
+                <thead className="py-2 text-center bg-cyan-900">
                     <tr>
                         <th colSpan={2} className="border-[1px] border-solid border-white p-2 text-center">{day_text}</th>
 
@@ -145,7 +145,7 @@ function DayCol(dayData: Day) {
                 <tbody>
                     {events.map(
                         event_entry => (
-                            <tr key={event_entry.name} className='hover:bg-emerald-700 duration-150 transition-all'>
+                            <tr key={event_entry.name} className='hover:bg-cyan-700 duration-150 transition-all'>
                                 <td className="border-[1px] border-solid border-white p-2 text-center">{event_entry.time}</td>
                                 <td className="border-[1px] border-solid border-white p-2">{event_entry.name}</td>
                             </tr>
@@ -160,7 +160,7 @@ function DayCol(dayData: Day) {
 
 export default function Schedule() {
     return (<>
-        <section id="agenda" className="flex flex-col p-10 items-center md:p-20 md:py-16 lg:px-32 items-left bg-emerald-800 z-30">
+        <section id="agenda" className="flex flex-col p-10 items-center md:p-20 md:py-16 lg:px-32 items-left bg-cyan-800 z-30">
         <div className="flex flex-col text-center mb-8">
                 <span className="text-lg text-emerald-200 font-semibold">What we&apos;ll be doing</span>
                 <h1 className="text-4xl text-white font-bold">Schedule</h1>

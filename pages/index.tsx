@@ -13,13 +13,14 @@ import { SponsorList, SponsorData } from "@components/Home/Sponsors"
 import { getAllDocuments } from "@lib/sanity/util"
 
 import Hero from "@components/Home/Hero"
-import Schedule from "@components/Home/Schedule"
 const About = dynamic(() => import("@components/Home/About"), { suspense: true })
 const WaveEffect = dynamic(() => import("@components/Home/WaveEffect"), { suspense: true })
 const EventDetails = dynamic(() => import("@components/Home/EventDetails"), { suspense: true })
 const FAQ = dynamic(() => import("@components/Home/FAQ"), { suspense: true })
 const Sponsors = dynamic(() => import("@components/Home/Sponsors"), { suspense: true })
 const Team = dynamic(() => import("@components/Home/Team"), { suspense: true })
+const Partners = dynamic(() => import("@components/Home/Partners"), { suspense: true })
+const Schedule = dynamic(() => import("@components/Home/Schedule"), { suspense: true })
 
 interface HomeProps {
   faq: FrequentlyAskedQuestion[],
@@ -63,6 +64,7 @@ export default function Home({ faq, team, sponsors }: HomeProps) {
       <EventDetails />
       <FAQ faq={faq} />
       <Sponsors sponsors={sponsors} />
+      <Partners />
       <Team team={team} />
       <Schedule />
     </Layout>

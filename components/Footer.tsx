@@ -5,7 +5,7 @@ import Image from 'next/image'
 import axios from 'axios'
 
 import EmailRegex from '@util/EmailRegex'
-import { discordLink, eventTime, facebookLink, instagramLink, linkedinLink, name, registrationLink, tiktokLink } from '@util/config'
+import { discordLink, eventTime, facebookLink, instagramLink, linkedinLink, name, registrationLink, tiktokLink, devpostLink } from '@util/config'
 
 import logo from '@media/logo.png'
 import InstagramLogo from "@media/ig.png"
@@ -152,11 +152,11 @@ export default function Footer() {
         </a>
 
         <a
-          href={discordLink}
+          href={devpostLink}
           className="text-[#087aa6] hover:text-[#087aa6]/75 active:text-[#087aa6]/50 duration-200"
           target="_blank"
           rel="noreferrer"
-          title="Discord"
+          title="Devpost"
         >
           <SiDevpost />
         </a>

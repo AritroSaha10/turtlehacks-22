@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
-import { name, registrationLink } from "@util/config";
+import { devpostLink, name, registrationLink } from "@util/config";
 
 import Logo from "@media/logo-transparent.png";
 import { GoThreeBars } from "react-icons/go"
@@ -50,8 +50,8 @@ const links = [
         priority: false
     },
     {
-        name: "Sign Up",
-        link: registrationLink,
+        name: "View Devpost",
+        link: devpostLink,
         id: "call-to-action",
         priority: true
     },

@@ -21,5 +21,6 @@ const registrationLink = "https://forms.gle/e7W7dhFUjkSi7gbi8"
 const mentorRegistrationLink = "https://forms.gle/voiSye7MA4rhQwQe7"
 const workshopLeadRegistrationLink = "https://forms.gle/yWdUy6LrGY5XQNv39"
 const volunteerRegistrationLink = "https://tally.so/r/wa9JW2"
+const openingCeremonyLink = "https://www.youtube.com/watch?v=5sJSouzNqec"
 
-export { name, description, image, eventTime, eventTimeShort, twitterCreator, discordLink, linkedinLink, instagramLink, facebookLink, devpostLink, tiktokLink, registrationLink, mentorRegistrationLink, workshopLeadRegistrationLink, volunteerRegistrationLink }
+export { name, description, image, eventTime, eventTimeShort, twitterCreator, discordLink, linkedinLink, instagramLink, facebookLink, tiktokLink, devpostLink, registrationLink, mentorRegistrationLink, workshopLeadRegistrationLink, volunteerRegistrationLink, openingCeremonyLink }

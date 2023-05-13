@@ -85,11 +85,11 @@ export default function Footer() {
 
       <a 
         className={`px-9 py-3 rounded-xl text-lg ${buttonColoring}`} 
-        href={registrationLink}
+        href={devpostLink}
         target="_blank" 
         rel="noreferrer"
       >
-        Sign up today!
+        View Devpost
       </a>
 
       <hr className="h-px bg-white w-full lg:w-[40%] my-6" />
